@@ -18,7 +18,7 @@ void	send_bit(int pid, char *str, size_t len)
 	size_t	i;
 
 	i = 0;
-	while (i < len)
+	while (i <= len)
 	{
 		shift = 0;
 		while (shift < 8)
