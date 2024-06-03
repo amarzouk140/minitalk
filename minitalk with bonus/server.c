@@ -6,18 +6,21 @@
 /*   By: amarzouk <amarzouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:05:09 by amarzouk          #+#    #+#             */
-/*   Updated: 2024/06/03 15:01:46 by amarzouk         ###   ########.fr       */
+/*   Updated: 2024/06/03 15:12:17 by amarzouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void	bit_handler(int bit)
+void	bit_handler(int sig)
 {
 	static int	c = 0;
 	static int	i = 0;
 
-	c += ((bit & 1) << i);
+	if (sig == SIGUSR2)
+		c += (0 << i);
+	else if (sig == SIGUSR1)
+		c += (1 << i);
 	i++;
 	if (i == 8)
 	{
