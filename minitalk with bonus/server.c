@@ -6,7 +6,7 @@
 /*   By: amarzouk <amarzouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 16:05:09 by amarzouk          #+#    #+#             */
-/*   Updated: 2024/01/16 18:03:42 by amarzouk         ###   ########.fr       */
+/*   Updated: 2024/06/03 15:01:46 by amarzouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	bit_handler(int bit)
 
 	c += ((bit & 1) << i);
 	i++;
-	if (i == 7)
+	if (i == 8)
 	{
 		ft_printf("%c", c);
 		if (!c)
